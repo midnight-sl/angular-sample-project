@@ -1,0 +1,23 @@
+<div class="user-details-container">
+  <div class="basic-user-info">
+    <img src="{{userDetails.avatar_url}}" alt="user profile picture">
+    <div class="login-info">
+      <h1 class="userLogin">&#64;{{userDetails.login}}</h1> 
+      <a href="{{userDetails.html_url}}" target="_blank">View on Github</a>
+    </div>
+  </div>
+  <div class="user-profile-details">
+    <p>General info about this user:</p>
+    <p>Full name: {{userDetails.name || 'anon'}}</p>
+    <p>Location: {{userDetails.location || 'Hidden location'}}</p>
+    <p>Company: {{userDetails.company || 'Unspecified company'}}</p>
+    <p>Email: {{userDetails.email || 'No public email'}}</p>
+    <p>Account created on: {{userDetails.created_at.substring(0,10)}}</p>
+  </div>
+  <div class="user-repos">
+    <h2>{{userDetails.login}}'s repositories:</h2>
+    <div *ngFor="let repo of userRepos" class="repo-names">
+      <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+    </div>
+  </div>
+</div>

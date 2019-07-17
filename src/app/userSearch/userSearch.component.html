@@ -1,0 +1,26 @@
+<div class="user-search-container">
+  <div class="search-bar">
+    <h2>Search Users</h2>
+    <div class="search">
+      <input class="search-input" type="text" [(ngModel)]='findUser' placeholder="Username" >
+      <button class="search-btn" (click)="findGitUsers()" routerLink="/search/{{findUser}}" >Search</button>
+    </div>
+  </div>
+  <div class="result-users">
+    <ul>
+      <li class="users-list" *ngFor="let user of gitUsers">
+        <div class="user-field">
+          <img class= "user-pic" src="{{user.avatar_url}}" alt="user profile picture">
+          <p>&#64;{{user.login}}</p>
+        </div>
+        <div class="user-links">
+          <a routerLink='/details/{{user.login}}'>View Details</a>
+          <a href="{{user.html_url}}" target="_blank">Open on Github</a>
+        </div>
+      </li>
+    </ul>
+    <div class="user-pagination">
+      <p>pagination should be here</p>
+    </div>
+  </div>
+</div>

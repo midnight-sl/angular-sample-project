@@ -1,0 +1,35 @@
+.user-details-container {
+  margin: 10px 30px;
+}
+.basic-user-info {
+  display: flex;
+  flex-direction: row;
+}
+img {
+  width: 50%;
+}
+.login-info {
+  text-align: center;
+  padding-left: 30px; 
+}
+.user-repos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.repo-names {
+  display: flex;
+  flex-direction: row;
+
+}
+a {
+  width: 35%;
+  padding: 0 15px;
+  color: #000000;
+}
+a:hover {
+  cursor: pointer;
+  color: rgb(12, 174, 238);
+  font-style: italic;
+  font-weight: 600;
+}

@@ -1,0 +1,21 @@
+.app {
+  width: 60vw;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+
+}
+app-header {
+  height: 10vh;
+}
+app-router {
+  height: 80vh
+}
+app-footer {
+  height: 10vh;
+}
